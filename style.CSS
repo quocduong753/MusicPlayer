@@ -1,0 +1,233 @@
+:root {
+    --primary-color:#eb86e9c4;
+    --secondary-color: #6fc8f6c2;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+  }
+  
+  body {
+  }
+  
+  html{
+    background: linear-gradient(0, var(--secondary-color)15%, var(--primary-color)100%);
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+
+}
+  
+  .player {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  .player .icon-pause {
+    display: none;
+  }
+  
+  .player.playing .icon-pause {
+    display: inline-block;
+    padding: 0 1px;
+  }
+  
+  .player.playing .icon-play {
+    display: none;
+  }
+
+  .player .icon-play{
+    margin-left: 2px;
+  }
+  
+  .dashboard {
+    padding: 18px 30px;
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-bottom: 1.5px solid #d6d6d6;
+  }
+  
+  /* HEADER */
+  header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .name-song{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(66, 63, 63);
+}
+  
+  header h4 {
+    text-align: center;
+    color: #f52bf1c4;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* CD */
+  .cd {
+    display: flex;
+    margin: auto;
+    width: 210px;
+    padding: 8px 0;
+  }
+  
+  .cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    background-size: cover;
+  }
+  
+  /* CONTROL */
+  .control {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 18px 0 8px 0;
+  }
+  
+  .control .btn {
+    font-size: 20px;
+  }
+
+  .btn--color {
+    opacity: 0.7;
+    cursor: pointer;
+    padding: 2px;
+    background: linear-gradient(0, var(--secondary-color)20%, #f52bf1c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  
+.btn-toggle-play{
+    color: #fff;
+    background: linear-gradient(0, var(--secondary-color)20%, #f52bf1c4 100%);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+.btn-random{
+  width: 25px;
+}
+
+.btn-random .random{
+  display: none;
+}
+
+.btn-random.active .random {
+    display: inline-block;
+}
+
+.btn-random.active .no-random{
+    display: none;
+} 
+
+.control .btn-repeat.repeat-active{
+  opacity: 1;
+  background: linear-gradient(0, var(--secondary-color)10%, #9e0c9cc4 100%);  
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+  
+  .progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  /* PLAYLIST */
+  .playlist {
+    margin-top: 429px;
+    padding: 4px;
+    background: rgb(228, 224, 224);
+    border-radius:0 0 10px 10px;
+    overflow: hidden;
+    bottom: 10px;
+  }
+  
+  .song {
+    display: flex;
+    align-items: center;
+    margin: 6px;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .song.active {
+  }
+  
+  /* .song:active {
+    opacity: 0.8;
+  } */
+  
+  .song.active .title {
+    background: linear-gradient(0, var(--secondary-color)15%, #f746f4c4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .song:active{
+    opacity: 0.8;
+  }
+
+  .song .thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-size: cover;
+    margin: 0 8px;
+  }
+  
+  .song .body {
+    flex: 1;
+    padding: 0 16px;
+  }
+  
+  .song .title {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  .song .author {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .song .option {
+    padding: 16px 8px;
+    color: #999;
+    font-size: 18px;
+  }
